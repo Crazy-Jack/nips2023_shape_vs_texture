@@ -22,7 +22,7 @@ The code that supports section 4.1 is documented inside `texture-synthesis-visua
 
 ![](assets/visualization_2.png)
 
-<h4 align="center">Top-K Neurons Encode Structural Information.</h4>
+<h4 align="center">Top-K Neurons Encode Structural Information. Visualization with Texture Synthesis program (TS).</h4>
 
 * Texture synthesis with Top-K + non Top-K neurons
 
