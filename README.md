@@ -24,13 +24,13 @@ The code that supports section 4.1 is documented inside `texture-synthesis-visua
 
 <h4 align="center">Top-K Neurons Encode Structural Information.</h4>
 
-### Texture synthesis with Top-K + non Top-K neurons
+* Texture synthesis with Top-K + non Top-K neurons
 
 ```
 python3 synthesize.py -i ../few-shot-img-syn/data/jeep -o output_jeep_all --topk 1.
 ```
 
-### Texture synthesis with non Top-K neurons only
+* Texture synthesis with non Top-K neurons only
 
 ```
 python3 synthesize.py -i ../few-shot-img-syn/data/jeep -o output_jeep_non_topk --topk 0.05 --reverse_topk
@@ -44,18 +44,18 @@ python3 synthesize.py -i ../few-shot-img-syn/data/jeep -o output_jeep_non_topk -
 
 In supplementary section 1, we directly visualize the pretrained VGG models' Top-K firing neuron and non Top-K firing neurons. Following the same procedure above to put the pretrained model into `topk-neurons-visualization-supp/models` folder and go to `topk-neurons-visualization-supp`. The results of the supplementary section 1 could be reproduced via:
 
-### Texture synthesis with Top-K + non Top-K neurons
+* Texture synthesis with Top-K + non Top-K neurons
 
 ```
 python3 synthesize.py -i ../few-shot-img-syn/data/jeep -o vis_jeep_all --topk 1. --lr 10 -n 1
 ```
 
-### Texture synthesis with Top-K neurons only
+* Texture synthesis with Top-K neurons only
 
 ```
 python3 synthesize.py -i ../few-shot-img-syn/data/jeep -o vis_jeep_topk --topk 0.05 --lr 10 -n 1
 ```
-### Texture synthesis with non Top-K neurons only
+* Texture synthesis with non Top-K neurons only
 
 ```
 python3 synthesize.py -i ../few-shot-img-syn/data/jeep -o vis_jeep_non_topk --topk 0.05 --reverse_topk --lr 10 -n 1
