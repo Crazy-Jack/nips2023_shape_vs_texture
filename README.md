@@ -18,7 +18,7 @@ This README is structured in
 Two visualizations are provided. 
 
 1. Texture synthesis difference with / without Top-K neurons. 
-The code that supports section 4.1 is documented inside `texture-synthesis-visualization`. To reproduce the results, first download the [pretrained VGG model](texture-synthesis-visualization/models/VGG19_normalized_avg_pool_pytorch) and place it manually inside `texture-synthesis-visualization/models/VGG19_normalized_avg_pool_pytorch` (A normal github pull would only provide a place holder, to download the model, either download manually or use git lfs). After place the model in the correct folder, go to `texture-synthesis-visualization` and follow the instructions below to reproduce the results. Examples are shown below.
+The code that supports section 4.1 is documented inside `texture-synthesis-visualization`. To reproduce the results, first download the [pretrained VGG model](texture-synthesis-visualization/models/VGG19_normalized_avg_pool_pytorch) and place it manually inside `texture-synthesis-visualization/models/VGG19_normalized_avg_pool_pytorch` (A normal github pull would only provide a place holder, to download the model, either download manually or use git lfs. Ensure the MD5 of the downloaded model to `5ef7cf6e11ebbdc1fe2e4f7c44d3f2b8`). After place the model in the correct folder, go to `texture-synthesis-visualization` and follow the instructions below to reproduce the results. Examples are shown below.
 
 ![](assets/visualization_2.png)
 
