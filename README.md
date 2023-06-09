@@ -1,9 +1,17 @@
 ## Emergence of Shape Bias in Convolutional Neural Networks through Activation Sparsity
 <br>
 
-![](assets/topk-inference.png)
-<center>Top-K sparsified simple CNNs reach the shape bias of Transformers (ViT).</center><br>
 This repo serves as supporting material of paper *Emergence of Shape Bias in Convolutional Neural Networks through Activation Sparsity*. The repo has been anonymized to abid the double-blind review process. 
+
+This README is structured in 
+* Visualization
+* CNN inference with Top-K to improve shape bias
+* CNN training with Top-K
+* Few shot image synthesis with Top-K
+
+![](assets/topk-inference.png)
+<h4 align="center">Top-K sparsified simple CNNs reach the shape bias of Transformers (ViT).</h4>
+
 
 ## 1. Visualization
 
@@ -13,8 +21,9 @@ Two visualizations are provided.
 The code that supports section 4.1 is documented inside `texture-synthesis-visualization`. To reproduce the results, first download the [pretrained VGG model](texture-synthesis-visualization/models/VGG19_normalized_avg_pool_pytorch) and place it manually inside `texture-synthesis-visualization/models/VGG19_normalized_avg_pool_pytorch` (A normal github pull would only provide a place holder, to download the model, either download manually or use git lfs). After place the model in the correct folder, go to `texture-synthesis-visualization` and follow the instructions below to reproduce the results. Examples are shown below.
 
 ![](assets/visualization_2.png)
-<center>Top-K Neurons Encode Structural Information.</center>
-<br>
+
+<h4 align="center">Top-K Neurons Encode Structural Information.</h4>
+
 ### Texture synthesis with Top-K + non Top-K neurons
 
 ```
@@ -31,8 +40,7 @@ python3 synthesize.py -i ../few-shot-img-syn/data/jeep -o output_jeep_non_topk -
 2. Direct visualization of the Top-K neurons and non Top-K neuron via reconstruction. 
 
 ![](assets/visualization_1.png)
-
-<center>Visualizing Top-K and non Top-K neurons through optimizing input images to match their activation.</center><br>
+<h4 align="center">Visualizing Top-K and non Top-K neurons through optimizing input images to match their activation.</h4>
 
 In supplementary section 1, we directly visualize the pretrained VGG models' Top-K firing neuron and non Top-K firing neurons. Following the same procedure above to put the pretrained model into `topk-neurons-visualization-supp/models` folder and go to `topk-neurons-visualization-supp`. The results of the supplementary section 1 could be reproduced via:
 
@@ -59,13 +67,11 @@ python3 synthesize.py -i ../few-shot-img-syn/data/jeep -o vis_jeep_non_topk --to
 ## 2. CNN inference with Top-K to improve shape bias
 
 ![](assets/topk-inference.png)
-<center>Top-K sparsified simple CNNs reach the shape bias of Transformers (ViT).</center>
-
-<br>
+<h4 align="center">Top-K sparsified simple CNNs reach the shape bias of Transformers (ViT).</h4>
 
 ![](assets/ablation-topk-inference.png)
-<center>Ablation Top-K: Different category favors different sparsity.</center>
-<br>
+<h4 align="center">Ablation Top-K: Different category favors different sparsity.</h4>
+
 
 To reproduce the above results, go to `cnns-inference-top-k/model-vs-human_topK`. We modify the [shape bias benchmark](https://github.com/bethgelab/model-vs-human) to evaluate models with Top-K layers installed. Our Top-K layers are implemented in `cnns-inference-top-k/model-vs-human_topK/modelvshuman/models/pytorch/topK/topK.py`, currently only pytorch version is supported. 
 
@@ -87,8 +93,8 @@ We utilize the mechanism from github repo [pytorch-AdaIN](https://github.com/nao
 The code to reproduce section 4.3 can be found inside `few-shot-img-syn` including the datasets (100 images for each category) trained on. The program will evaluate the synthesis quality every 1000 training steps and keep the best performing model sofar. The model will typically converge after 30,000 - 50,0000 steps of training but the actual convergence depends on the datasets. The best Top-K sparsity hyperparameters are provided inside `few-shot-img-syn/TopKGen/scripts/[category]/run.sh`. 
 
 ![](assets/few-shot-syn-images.png)
-<center>Few Shot Synthesis Examples with Top-K.</center>
-<br>
+<h4 align="center">Few Shot Synthesis Examples with Top-K.</h4>
+
 The synthesis program is wrapped as a package. To run the model, first go to `few-shot-img-syn` and run 
 
 ```bash
