@@ -1,0 +1,2 @@
+subj,dataset_name,metric_name,performance
+vit_large_patch16_224,cue-conflict,accuracy (top-1),0.45703125

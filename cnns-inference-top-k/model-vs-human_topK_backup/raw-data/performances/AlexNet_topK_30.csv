@@ -1,0 +1,2 @@
+subj,dataset_name,metric_name,performance
+AlexNet_topK_30,cue-conflict,accuracy (top-1),0.27109375

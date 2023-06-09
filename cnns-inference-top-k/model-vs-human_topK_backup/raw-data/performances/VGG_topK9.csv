@@ -1,0 +1,2 @@
+subj,dataset_name,metric_name,performance
+VGG_topK9,cue-conflict,accuracy (top-1),0.275
