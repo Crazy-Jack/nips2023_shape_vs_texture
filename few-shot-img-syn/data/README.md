@@ -1,1 +1,1 @@
-# Few shot image synthesis
+# Few shot image synthesis datasets
