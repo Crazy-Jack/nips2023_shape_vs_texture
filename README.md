@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## Emergence of Shape Bias in Convolutional Neural Networks through Activation Sparsity
 <br>
 
@@ -98,6 +97,3 @@ pip3 install -e .
 
 then, go to `few-shot-img-syn/TopKGen/scripts/[category]` and use `run.sh` to start the training program. The evaluation will be done every 1000 steps automatically (sampling 3000 images and evaluate FID & KID).
 
-=======
-first commit 
->>>>>>> 9bf0e0616b0f010b735e9f7aaca749a305967666
